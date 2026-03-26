@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NovaMart</title>
+<link rel="stylesheet" href="style.css">
+<script src="script.js"></script>
+</head>
+<body>
+
+<header class="header">
+  <div class="logo">🛍️ NovaMart</div>
+
+  <div class="search-box">
+    <input type="text" id="searchInput" placeholder="Search products...">
+    <button onclick="searchProduct()">🔍</button>
+  </div>
+
+  <div class="nav">
+    <span>🏠 Home</span>
+    <span>👤 Account</span>
+    <span>📞 Contact</span>
+    <span>ℹ️ About</span>
+    <span class="cart-icon">🛒 Cart (<span id="cart-count">0</span>)</span>
+  </div>
+</header>
+
+<section class="banner">
+  <h1>✨ Mega Deals Zone</h1>
+</section>
+
+<section class="products">
+
+<!-- GAMING -->
+<h2>🎮 Gaming</h2>
+<div class="grid">
+<div class="card"><span class="discount">-20%</span><img src="consol.jpg"><h4>Console</h4><div class="rating">⭐⭐⭐⭐⭐</div><p><span class="old">₹50000</span> ₹45000</p><button onclick="addToCart('Console')">Add to Cart</button><button class="remove" onclick="removeFromCart('Console')">Remove</button></div>
+<div class="card"><span class="discount">-15%</span><img src="keyboard.jpg"><h4>Keyboard</h4><div class="rating">⭐⭐⭐⭐</div><p><span class="old">₹3500</span> ₹3000</p><button onclick="addToCart('Keyboard')">Add to Cart</button><button class="remove" onclick="removeFromCart('Keyboard')">Remove</button></div>
+<div class="card"><span class="discount">-10%</span><img src="mouse.webp"><h4>Mouse</h4><div class="rating">⭐⭐⭐⭐</div><p><span class="old">₹1400</span> ₹1200</p><button onclick="addToCart('Mouse')">Add to Cart</button><button class="remove" onclick="removeFromCart('Mouse')">Remove</button></div>
+<div class="card"><span class="discount">-25%</span><img src="monitor.jpg"><h4>Monitor</h4><div class="rating">⭐⭐⭐⭐⭐</div><p><span class="old">₹24000</span> ₹18000</p><button onclick="addToCart('Monitor')">Add to Cart</button><button class="remove" onclick="removeFromCart('Monitor')">Remove</button></div>
+<div class="card"><span class="discount">-18%</span><img src="headset.jpg"><h4>Headset</h4><div class="rating">⭐⭐⭐⭐</div><p><span class="old">₹3000</span> ₹2500</p><button onclick="addToCart('Headset')">Add to Cart</button><button class="remove" onclick="removeFromCart('Headset')">Remove</button></div>
+<div class="card"><span class="discount">-12%</span><img src="controller.webp"><h4>Controller</h4><div class="rating">⭐⭐⭐⭐⭐</div><p><span class="old">₹4000</span> ₹3500</p><button onclick="addToCart('Controller')">Add to Cart</button><button class="remove" onclick="removeFromCart('Controller')">Remove</button></div>
+</div>
+
+<!-- TECH -->
+<h2>💻 Tech</h2>
+<div class="grid">
+<div class="card"><span class="discount">-20%</span><img src="laptop.jpg"><h4>Laptop</h4><div class="rating">⭐⭐⭐⭐⭐</div><p><span class="old">₹70000</span> ₹55000</p><button onclick="addToCart('Laptop')">Add to Cart</button><button class="remove" onclick="removeFromCart('Laptop')">Remove</button></div>
+<div class="card"><span class="discount">-10%</span><img src="phone.avif"><h4>Phone</h4><div class="rating">⭐⭐⭐⭐⭐</div><p><span class="old">₹22000</span> ₹20000</p><button onclick="addToCart('Phone')">Add to Cart</button><button class="remove" onclick="removeFromCart('Phone')">Remove</button></div>
+<div class="card"><span class="discount">-22%</span><img src="tablet.jpg"><h4>Tablet</h4><div class="rating">⭐⭐⭐⭐</div><p><span class="old">₹19000</span> ₹15000</p><button onclick="addToCart('Tablet')">Add to Cart</button><button class="remove" onclick="removeFromCart('Tablet')">Remove</button></div>
+<div class="card"><span class="discount">-18%</span><img src="camera.jpg"><h4>Camera</h4><div class="rating">⭐⭐⭐⭐</div><p><span class="old">₹30000</span> ₹25000</p><button onclick="addToCart('Camera')">Add to Cart</button><button class="remove" onclick="removeFromCart('Camera')">Remove</button></div>
+<div class="card"><span class="discount">-15%</span><img src="watch.jpg"><h4>Watch</h4><div class="rating">⭐⭐⭐⭐</div><p><span class="old">₹3500</span> ₹3000</p><button onclick="addToCart('Watch')">Add to Cart</button><button class="remove" onclick="removeFromCart('Watch')">Remove</button></div>
+<div class="card"><span class="discount">-12%</span><img src="speaker.jpg"><h4>Speaker</h4><div class="rating">⭐⭐⭐⭐</div><p><span class="old">₹4000</span> ₹3500</p><button onclick="addToCart('Speaker')">Add to Cart</button><button class="remove" onclick="removeFromCart('Speaker')">Remove</button></div>
+</div>
+
+<!-- CREATIVE -->
+<h2>🎨 Creative</h2>
+<div class="grid">
+<div class="card"><span class="discount">-20%</span><img src="sketch kit.jpg"><h4>Sketch Kit</h4><div class="rating">⭐⭐⭐⭐⭐</div><p><span class="old">₹1000</span> ₹800</p><button onclick="addToCart('Sketch')">Add to Cart</button><button class="remove" onclick="removeFromCart('Sketch')">Remove</button></div>
+<div class="card"><span class="discount">-15%</span><img src="paints.avif"><h4>Paint</h4><div class="rating">⭐⭐⭐⭐</div><p><span class="old">₹1100</span> ₹900</p><button onclick="addToCart('Paint')">Add to Cart</button><button class="remove" onclick="removeFromCart('Paint')">Remove</button></div>
+<div class="card"><span class="discount">-10%</span><img src="drawing tablet.jpg"><h4>Drawing Tablet</h4><div class="rating">⭐⭐⭐⭐⭐</div><p><span class="old">₹7000</span> ₹6000</p><button onclick="addToCart('Drawing')">Add to Cart</button><button class="remove" onclick="removeFromCart('Drawing')">Remove</button></div>
+<div class="card"><span class="discount">-25%</span><img src="notebook.jpg"><h4>Notebook</h4><div class="rating">⭐⭐⭐⭐</div><p><span class="old">₹400</span> ₹300</p><button onclick="addToCart('Notebook')">Add to Cart</button><button class="remove" onclick="removeFromCart('Notebook')">Remove</button></div>
+<div class="card"><span class="discount">-18%</span><img src="brush.jpg"><h4>Brush</h4><div class="rating">⭐⭐⭐⭐</div><p><span class="old">₹500</span> ₹400</p><button onclick="addToCart('Brush')">Add to Cart</button><button class="remove" onclick="removeFromCart('Brush')">Remove</button></div>
+<div class="card"><span class="discount">-12%</span><img src="palette.jpg"><h4>Palette</h4><div class="rating">⭐⭐⭐⭐</div><p><span class="old">₹450</span> ₹350</p><button onclick="addToCart('Palette')">Add to Cart</button><button class="remove" onclick="removeFromCart('Palette')">Remove</button></div>
+</div>
+
+<!-- LIFESTYLE -->
+<h2>👕 Lifestyle</h2>
+<div class="grid">
+<div class="card"><span class="discount">-20%</span><img src="hoodie.webp"><h4>Hoodie</h4><div class="rating">⭐⭐⭐⭐</div><p><span class="old">₹1800</span> ₹1500</p><button onclick="addToCart('Hoodie')">Add to Cart</button><button class="remove" onclick="removeFromCart('Hoodie')">Remove</button></div>
+<div class="card"><span class="discount">-10%</span><img src="shoes.jpg"><h4>Shoes</h4><div class="rating">⭐⭐⭐⭐⭐</div><p><span class="old">₹2800</span> ₹2500</p><button onclick="addToCart('Shoes')">Add to Cart</button><button class="remove" onclick="removeFromCart('Shoes')">Remove</button></div>
+<div class="card"><span class="discount">-15%</span><img src="bags.jpg"><h4>Bag</h4><div class="rating">⭐⭐⭐⭐</div><p><span class="old">₹1500</span> ₹1200</p><button onclick="addToCart('Bag')">Add to Cart</button><button class="remove" onclick="removeFromCart('Bag')">Remove</button></div>
+<div class="card"><span class="discount">-18%</span><img src="cap.webp"><h4>Cap</h4><div class="rating">⭐⭐⭐⭐</div><p><span class="old">₹600</span> ₹500</p><button onclick="addToCart('Cap')">Add to Cart</button><button class="remove" onclick="removeFromCart('Cap')">Remove</button></div>
+<div class="card"><span class="discount">-12%</span><img src="glasses.avif"><h4>Glasses</h4><div class="rating">⭐⭐⭐⭐</div><p><span class="old">₹1200</span> ₹1000</p><button onclick="addToCart('Glasses')">Add to Cart</button><button class="remove" onclick="removeFromCart('Glasses')">Remove</button></div>
+<div class="card"><span class="discount">-22%</span><img src="t-shirt.jpg"><h4>T-shirt</h4><div class="rating">⭐⭐⭐⭐</div><p><span class="old">₹1000</span> ₹800</p><button onclick="addToCart('Tshirt')">Add to Cart</button><button class="remove" onclick="removeFromCart('Tshirt')">Remove</button></div>
+</div>
+
+</section>
+
+</body>
+</html>
